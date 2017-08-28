@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/build/css/vendor.css">
+  <link rel="stylesheet" href="/build/css/styles.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <title>Porous</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="jumbotron">Porous</h1>
+    <div class="panel panel-info">
+      <div class="panel-heading">Porous Calculator:</div>
+      <div class="panel-body">
+        <form id="calculation">
+          <div class="form-group">
+            <label>Asphalt Surface(a1):</label>
+            <input type="text" id="asphaltSurface" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Applied Load(q):</label>
+            <input type="text" id="appliedLoad" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Load Diameter(a):</label>
+            <input type="text" id="loadDiameter" placeholder="in" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Allowable change in the Present Serviceability Index over design life (delta-PSI):</label>
+            <input type="text" id="deltaPsi" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Standard Normal Deviate (zR):</label>
+            <input type="text" id="zR" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Standard Deviation (s0):</label>
+            <input type="text" id="sZero" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>number of 18-kip equivalent single axle loads (ESALs) expected over design life(w18):</label>
+            <input type="text" id="esal" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Top Layer Modulus(e1):</label>
+            <input type="text" id="e1" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Top Layer Thickness(h1)</label>
+            <input type="text" id="h1" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Uncompacted Subgrade Modulus(e2):</label>
+            <input type="text" id="e2" class="form-control">
+          </div>
+          <button type="submit" name="button" class="btn btn-block btn-success" >Calculate</button>
+        </form>
+        <hr>
+        <div class="well">
+            <ul><h5>Results:</h5>
+              <li> Structural number is : <span id='sn'></span></li>
+              <li> Composite Subgrade Modulus is : <span id='mR'></span></li>
+              <li> Required Porous Asphalt Thickness is : <span id='thick'></span></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="/build/js/vendor.min.js"></script>
+  <script type="text/javascript" src="/build/js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/bootstrap-slider.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/css/bootstrap-slider.min.css" />
+</body>
+</html>
